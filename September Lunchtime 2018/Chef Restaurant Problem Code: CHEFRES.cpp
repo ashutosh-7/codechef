@@ -6,8 +6,8 @@ using namespace std;
 
 void submit()
 {
-int n,m,i,j,k1,k2,p3=1,p4=0,p5=0,p6=0,p7=0,p8=0,p9=0,l1=0,l2=0,l3=0,l4=0,l5=0;
-int low,high,mid1,mid2,key,c5=0,c6=0,p10;
+int n,m,i,j,k1,k2,p3=1,p4=0,p5=0,p6=0,p7=0,p8=0,p9=0,l1=0,l2=0,l3=0,l4=0,l5=0;int i9=0;
+int low,high,mid1,mid2,key,c5=0,c6=0,p10;int i10=0;
 vector<int>v1;
 vector<int>v2;
 vector<int>v3;
@@ -45,8 +45,8 @@ for(p10=0;p10<m;p10++)
 	k1=v3[p10];
 low=0;
 high=n;
-
-c6=0;
+p7=0;p8=0;p9=0;i10=0;
+c6=0;i9=0;
 //1st binary search
 while(low<=high)
    {
@@ -112,8 +112,8 @@ if(c6==1 &&p7==0 )
 	
  
 p5=k1;
-//cout<<p5;
- 
+
+ cout<<k1;
 	for(i=0;i<n;i++)
  	{
  		p3=v1[i];
@@ -124,21 +124,17 @@ p5=k1;
  			break;
  		}
  	}
- 	if(p5<=1000)
+ 	if(p5>0)
  	{
  		cout<<p5<<endl;
  		p8=1;
  	}
- 	else{
- 		cout<<"-1"<<endl;
- 		p8=1;
- 	}
+ 	
 }
 
 if(p7==0 && p8==0)
 {
-	
-	
+
 	if(k1>v2[n-1])
 	{
 		cout<<"-1"<<endl;
@@ -148,6 +144,7 @@ if(p7==0 && p8==0)
 if(p7==0 && p8==0 && p9==0)
 {
 
+	//cout<<"  "<<"csdscd"<<"  ";
  for(i=0;i<n;i++)
  {
  	
@@ -156,7 +153,7 @@ if(p7==0 && p8==0 && p9==0)
  	if(k1>l1 && k1<l2)
  	{
  		cout<<"0"<<endl;
- 	
+ 	i9=1;
  		break;
  	}
  
@@ -167,17 +164,32 @@ if(p7==0 && p8==0 && p9==0)
  
  	
  }
- if(k1<v1[0])
+ if(k1<v1[0] && i9==0)
  {
  	
  	l5=v1[0]-k1;
  	
  	cout<<l5<<endl;
+ 	i10=1;
  }
- 
+ if(p7==0 && p8==0 && p9==0 && i9==0 && i10==0)
+ {
+ 	int p6=k1;
+ 		for(i=0;i<n;i++)
+ 	{
+ 		p3=v1[i];
+ 		
+ 		if(p6<p3)
+ 		{
+ 			p6=p3-p6;
+ 			cout<<p6<<endl;
+ 			break;
+ 		}
+ 	}
+ }
  l5=0;
  p7=0;p8=0;p9=0;
-
+//cout<<"loop "<<p10<<endl;
 }
 v1.clear();
 v2.clear();
@@ -185,10 +197,7 @@ v3.clear();
 
  
  }
- 
-
-
-int main() {
+ int main() {
 int t,i1;
 int n,j,num,p=0;
 	
