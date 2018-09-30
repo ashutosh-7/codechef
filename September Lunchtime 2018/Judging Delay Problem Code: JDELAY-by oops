@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+class ashu
+{
+	private:
+	int l1=0;
+	public:
+	int fucn1()
+	{
+	int i,j,k=0;
+	cin>>i;
+	while(i>0)
+	{
+	k=fucn2();
+	i--;
+	}
+
+	
+	return k;
+	}
+	int fucn2()
+	{
+		int l,p;
+		cin>>l;
+		cin>>p;
+		if(p-l>5)
+		{
+			l1++;
+		}
+		return l1;
+	}
+};
+int main() {
+	ashu a;int b=0,c=0;
+	int n;
+	cin>>n;
+	while(n>0)
+	{
+	b=a.fucn1();
+	
+	
+	cout<<abs(b-c)<<endl;
+	c=b;
+	n--;
+	}
+	return 0;
+}
